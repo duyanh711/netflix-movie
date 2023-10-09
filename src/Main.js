@@ -11,7 +11,6 @@ const Main = () => {
         })
     }, [])
 
-    console.log(movies)
 
     return (
         <div>
