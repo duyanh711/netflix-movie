@@ -3,20 +3,20 @@ import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import SignIn from "./pages/SignIn";
 import SignUp from "./pages/SignUp";
+import { AuthContextProvider } from "./context/AuthContext";
 
 
 function App() {
   return (
     <>
-      <div className="top-0">
+      <AuthContextProvider>
         <Navbar />
-      </div>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/signin" element={<SignIn />} />
-        <Route path="/signup" element={<SignUp />} />
-      </Routes>
-
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/signin" element={<SignIn />} />
+          <Route path="/signup" element={<SignUp />} />
+        </Routes>
+      </AuthContextProvider>
     </>
   );
 }
