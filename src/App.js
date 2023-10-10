@@ -8,7 +8,9 @@ import SignUp from "./pages/SignUp";
 function App() {
   return (
     <>
-      <Navbar />
+      <div className="top-0">
+        <Navbar />
+      </div>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/signin" element={<SignIn />} />
