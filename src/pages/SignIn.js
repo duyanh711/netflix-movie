@@ -2,8 +2,8 @@ import React from 'react'
 
 function SignIn() {
     return (
-        <div>
-            SignIn
+        <div className='w-full h-full'>
+
         </div>
     )
 }

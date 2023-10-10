@@ -23,7 +23,7 @@ const Navbar = () => {
 
 
     return (
-        <div className={`flex fixed justify-between h-[30px] md:p-8 p-4  w-full items-center text-center z-[100] top-0 ${show && ' bg-black/90 fixed'} `}>
+        <div className={`flex fixed justify-between md:h-[25px]  md:p-8 p-4  w-full items-center text-center z-[100] top-0 ${show && ' bg-black/90 fixed'} `}>
             <Link to="/"><h1 className='text-red-600 text-4xl font-bold cursor-pointer'>NETFLIX</h1></Link>
             <div>
                 <Link to="/signin"><button className='text-white pr-4'>Sign In</button></Link>
