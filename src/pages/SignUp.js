@@ -31,9 +31,14 @@ function SignUp() {
                             <h1 className='font-bold text-3xl'>Sign Up</h1>
                             {error ? <p className='text-white mt-2 bg-red-600 -mb-2'>{error}</p> : <p></p>}
                             <form onSubmit={handleSubmit} className='flex flex-col py-8'>
-                                <input onChange={(e) => setEmail(e.target.value)}
+                                <input
+                                    onInput={() => setError('')}
+                                    onChange={(e) => setEmail(e.target.value)}
                                     className='bg-gray-700 w-full p-3 rounded my-3' type='email' placeholder='Email' />
-                                <input onChange={(e) => setPassword(e.target.value)} className='bg-gray-700 w-full p-3 rounded my-3' type='password' placeholder='Password' />
+                                <input
+                                    onInput={() => setError('')}
+                                    onChange={(e) => setPassword(e.target.value)}
+                                    className='bg-gray-700 w-full p-3 rounded my-3' type='password' placeholder='Password' />
                                 <button className='bg-red-600 p-3 my-6 rounded font-bold'>Sign Up</button>
 
                                 <p className='text-gray-600'>Already subscribed to Netflix?<span className='text-white font-bold cursor-pointer'>
