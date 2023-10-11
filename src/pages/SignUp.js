@@ -1,8 +1,11 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { UserAuth } from '../context/AuthContext'
 
 function SignUp() {
+
+    const navigate = useNavigate()
+
 
     const { user, SignUp } = UserAuth()
     const [email, setEmail] = useState('')
@@ -13,6 +16,7 @@ function SignUp() {
         e.preventDefault()
         try {
             await SignUp(email, password)
+            navigate('/')
 
         }
         catch (error) {
